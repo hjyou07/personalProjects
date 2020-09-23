@@ -1,0 +1,126 @@
+scalar GraphQLDate
+
+type User {
+  signedIn: Boolean!
+  givenName: String
+  name: String
+  email: String
+}
+
+##### Top level declarations
+type Query {
+  about: String!
+  user: User!
+  contact(id: Int!): Contact!
+  contactList(
+    ownerEmail: String
+    contactFrequency: frequency
+    priority: priority
+    familiarity: familiarity
+    activeStatus: Boolean
+    nextContactDate: GraphQLDate
+    daysAhead: Int
+    search: String
+    page: Int = 1
+  ): ContactsWithPages
+}
+type Mutation {
+  setAboutMessage(message: String!): String
+
+  contactAdd(contact: ContactInputs!): Contact!
+  contactUpdate(id: Int!, changes: ContactUpdateInputs!): Contact!
+  contactDelete(id: Int!): Boolean!
+  contactRestore(id: Int!): Boolean!
+}
+
+enum frequency {
+  Weekly
+  Biweekly
+  Monthly
+  Quarterly
+  Biannual
+  Yearly
+  None
+  Custom
+}
+
+enum priority {
+  low
+  medium
+  high
+}
+
+enum familiarity {
+  familiar
+  unfamiliar
+  intimate
+  meaningful
+}
+
+type Contact {
+  _id: ID!
+  id: Int!
+  name: String!
+  company: String
+  title: String
+  contactFrequency: frequency!
+  email: String
+  phone: String
+  LinkedIn: String
+  priority: priority
+  familiarity: familiarity
+  contextSpace: String
+  activeStatus: Boolean!
+  lastContactDate: GraphQLDate
+  nextContactDate: GraphQLDate
+  notes: String
+  ownerEmail: String
+}
+
+type ContactsWithPages {
+  contacts: [Contact!]!
+  pages: Int
+}
+
+"Toned down contact, used as inputs"
+input ContactInputs {
+  name: String!
+  company: String
+  title: String
+  "if not supplied, will be set to 'Custom'"
+  contactFrequency: frequency = Custom
+  email: String
+  phone: String
+  LinkedIn: String
+  "if not supplied, will be set to 'low'"
+  priority: priority = low
+  "if not supplied, will be set to 'unfamiliar'"
+  familiarity: familiarity = unfamiliar
+  contextSpace: String
+  "if not supplied, will be set to 'true'"
+  activeStatus: Boolean = true
+  lastContactDate: GraphQLDate
+  nextContactDate: GraphQLDate
+  notes: String
+  ownerEmail: String
+}
+
+"""Inputs for contactUpdate: all are optional. Whichever is specified will
+be set to the given value, undefined fields will remain unmodified."""
+input ContactUpdateInputs {
+  name: String
+  company: String
+  title: String
+  contactFrequency: frequency
+  email: String
+  phone: String
+  LinkedIn: String
+  priority: priority
+  familiarity: familiarity
+  contextSpace: String
+  activeStatus: Boolean
+  lastContactDate: GraphQLDate
+  nextContactDate: GraphQLDate
+  notes: String
+  ownerEmail: String
+}
