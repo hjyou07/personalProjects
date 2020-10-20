@@ -15,22 +15,22 @@ Our group project is called <b>Campfire</b>. The purpose of this web application
 ## Final Screenshots of Campfire Project
 
 <b>The Welcome page prior to signing in. And if not signed it, will not allow the user to access the Dashboard/ Contacts page.</b>
-![](https://github.ccs.neu.edu/NEU-CS5610-SU20/GroupProject_jsonStatham_API/blob/master/ReadmeImages/Welcome2.png)
+![](https://github.com/hjyou07/personalProjects/tree/master/WebDev-personalCRMApplication/ReadmeImages/Welcome2.png)
 
 <b>The Dashboard page where a user can view the upcoming contacts based on urgency (date).</b>
-![](https://github.ccs.neu.edu/NEU-CS5610-SU20/GroupProject_jsonStatham_API/blob/master/ReadmeImages/Dashboard2.png)
+![](https://github.com/hjyou07/personalProjects/tree/master/WebDev-personalCRMApplication/ReadmeImages/Dashboard2.png)
 
 <b>The Dashboard page where a user can filter our contacts via urgency (date).</b>
-![](https://github.ccs.neu.edu/NEU-CS5610-SU20/GroupProject_jsonStatham_API/blob/master/ReadmeImages/DashboardFilter2.png)
+![](https://github.com/hjyou07/personalProjects/tree/master/WebDev-personalCRMApplication/ReadmeImages/DashboardFilter2.png)
 
 <b>The Contacts page where a user can view all of their contacts.</b>
-![](https://github.ccs.neu.edu/NEU-CS5610-SU20/GroupProject_jsonStatham_API/blob/master/ReadmeImages/Contacts2.png)
+![](https://github.com/hjyou07/personalProjects/tree/master/WebDev-personalCRMApplication/ReadmeImages/Contacts2.png)
 
 <b>The Contacts page where a user can drill down into a specific contact revealing additional details of the selected contact.</b>
-![](https://github.ccs.neu.edu/NEU-CS5610-SU20/GroupProject_jsonStatham_API/blob/master/ReadmeImages/ContactsDetails2.png)
+![](https://github.com/hjyou07/personalProjects/tree/master/WebDev-personalCRMApplication/ReadmeImages/ContactsDetails2.png)
 
 <b>The Contacts page where a user can filter out contacts according to the filters allowed.</b>
-![](https://github.ccs.neu.edu/NEU-CS5610-SU20/GroupProject_jsonStatham_API/blob/master/ReadmeImages/ContactsFilter2.png)
+![](https://github.com/hjyou07/personalProjects/tree/master/WebDev-personalCRMApplication/ReadmeImages/ContactsFilter2.png)
 
 <b>The Contacts page where a user can delete/ restore selected contacts. </b>
 ![](https://github.ccs.neu.edu/NEU-CS5610-SU20/GroupProject_jsonStatham_API/blob/master/ReadmeImages/Delete2.png)
